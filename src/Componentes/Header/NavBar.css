@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Nombre-de-la-Fuente';
+    src: url('./fonts/nombre-del-archivo-de-la-fuente.ttf') format('truetype');
+    /* Agrega más formatos de fuente si los tienes */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+}
+
+h1 {
+    font-family: 'Aclonica', cursive;
+    font-size: 3rem;
+}
+
+.logo_span {
+    color: #2F7391;
+}
+
+.Header_logo {
+    width: 20%;
+}
+
+.Header_navBox {
+    width: 60%;
+}
+
+.Header_navList {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(18, 31, 78);
+    font-family: 'Aladin', cursive;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.Header_shopping {
+    width: 200px;
+    position: relative;
+}
+
+.shop_counter {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.785);
+    padding: 2px;
+    width: 18px;
+    border-radius: 20px;
+    color: white;
+    top: 20px;
+    left: 100px;
+}

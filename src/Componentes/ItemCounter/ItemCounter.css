@@ -1,0 +1,23 @@
+.countBox {
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    height: 90px;
+    width: 150px;
+}
+
+p {
+    color: wheat;
+}
+
+.countBoxButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 5px 0px;
+}

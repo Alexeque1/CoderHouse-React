@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(./IMG/side-wave_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
