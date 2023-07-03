@@ -1,35 +1,38 @@
 import './NavBar.css'
+import CartWidget from '../CartWidget/CartWidget'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
-    const carImg = 'https://api.iconify.design/material-symbols/shopping-cart.svg?color=%232f7391&width=50&height=50'
 
   return (
     <header>
         <div class="Header_logo">
-            <h1>Funko<span class="logo_span">Pop</span></h1>
+            <Link className='link' to="/">
+                <h1>Funko<span class="logo_span">Pop</span></h1>
+            </Link>
         </div>
         <div class="Header_navBox">
             <nav class="Header_nav">
                 <ul class="Header_navList">
                     <li>
-                        <a href="">Home</a>
+                        <NavLink className="link" to="/">Home</NavLink>
                     </li>
                     <li>
-                        <a href="">Colección</a>
+                        <NavLink className="link" to="/Disney/1">Disney</NavLink>
                     </li>
                     <li>
-                        <a href="">Sobre Nosotros</a>
+                        <NavLink className="link" to="/Deportes/2">Deportes</NavLink>
                     </li>
                     <li>
-                        <a href="">Contacto</a>
+                        <NavLink className="link" to="/TV/3">TV</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className="link" to="/Peliculas/4">Peliculas</NavLink>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="Header_shopping">
-            <img src={carImg} alt="Imagen de carrito de compras" />
-            <p class="shop_counter">1</p>
-        </div>
+        <CartWidget/>
     </header>
   )
 }

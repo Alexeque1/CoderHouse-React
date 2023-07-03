@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(./IMG/side-wave_background.jpg);
+  background-image: url(../src/Componentes/IMG/side-wave_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

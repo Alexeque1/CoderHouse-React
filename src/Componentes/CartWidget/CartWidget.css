@@ -1,0 +1,15 @@
+.Header_shopping {
+    width: 200px;
+    position: relative;
+}
+
+.shop_counter {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.785);
+    padding: 2px;
+    width: 18px;
+    border-radius: 20px;
+    color: white;
+    top: 20px;
+    left: 100px;
+}

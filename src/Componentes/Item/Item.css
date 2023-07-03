@@ -1,0 +1,62 @@
+.ItemBox {
+    width: 350px;
+    height: 100%;
+    margin: 10px 10px;
+}
+
+.itemPicture {
+    display: block;
+    width: 100%;
+    height: 65%;
+    background-color: #ffffff;
+    border-radius: 30px 30px 0px 0px;
+    height: 88%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.itemPicture:hover {
+    background-color: #abccc1;
+    transform:scale(1.05,1.05);
+    border-radius: 30px 30px 30px 30px;
+}
+
+.itemPicture img {
+    width: 100%;
+    height: 100%;
+}
+
+.ItemBox_inf {
+    padding: 15px;
+    background-color: rgb(33, 58, 149);
+    border-radius: 0px 0px 30px 30px;
+    text-align: center;
+}
+
+.ItemBox_title {
+    font-family: 'Aclonica', sans-serif;
+    color: rgb(69, 176, 195);
+    font-size: 20px;
+    margin: 5px 0px;
+}
+
+.ItemBox_subTitle {
+    font-family: 'Aclonica', sans-serif;
+    color: rgb(251, 251, 251);
+    font-size: 15px;
+    margin: 5px 0px;
+}
+
+.btn {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 13px;
+    background-color: #D9D9D9;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #9c9696;
+    cursor: pointer;
+}

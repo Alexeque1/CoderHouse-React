@@ -36,28 +36,13 @@ h1 {
 
 li {
     list-style-type: none;
+    text-decoration: none;
 }
 
-a {
+.link {
     text-decoration: none;
     color: rgb(18, 31, 78);
     font-family: 'Aladin', cursive;
     font-size: 1.8rem;
     cursor: pointer;
-}
-
-.Header_shopping {
-    width: 200px;
-    position: relative;
-}
-
-.shop_counter {
-    position: absolute;
-    background-color: rgba(255, 0, 0, 0.785);
-    padding: 2px;
-    width: 18px;
-    border-radius: 20px;
-    color: white;
-    top: 20px;
-    left: 100px;
 }

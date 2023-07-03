@@ -1,30 +1,22 @@
-import { useState } from "react"
-import './ItemCounter.css'
+import { useState, useEffect } from "react";
+import { useCounter } from "../../Hooks/useCounter";
 
-const ItemCounter = () => {
-    const [contador, counter] = useState(1)
+const ItemCounter = ({colorInicial}) => {
 
-    let incrementar = () => {
-        counter(contador + 1)
-    }
+    const [color, setColor] = useState(colorInicial)
+    const {contador, sumar, restar} = useCounter(1,10)
 
-    let decrementar = () => {
-        if (contador > 1) {
-            counter(contador - 1)
-        }
-    }
+    useEffect(() => {
+        contador > 5 ? setColor('red') : setColor(colorInicial);
+    }, [contador])
 
   return (
-      <div className="countBox">
-          <div>
-              <p> {contador} </p>
-          </div>
-          <div className="countBoxButtons">
-              <button onClick={decrementar}> - </button>
-              <button onClick={incrementar}> + </button>
-          </div>
-      </div>
-  );
+    <div>
+        <button onClick={sumar}> + </button>
+        <p> {contador} </p>
+        <button onClick={restar} style={{color:color}}> - </button>
+    </div>
+  )
 }
 
 export default ItemCounter
