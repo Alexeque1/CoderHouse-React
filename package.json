@@ -1,7 +1,7 @@
 {
   "name": "mi-tienda",
   "private": true,
-  "homepage": "https://alexeque1.github.io/CoderHouse-React/build",
+  "homepage": "https://alexeque1.github.io/CoderHouse-React/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
