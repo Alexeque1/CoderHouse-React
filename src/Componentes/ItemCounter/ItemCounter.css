@@ -1,11 +1,18 @@
+.counter {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .countBox {
-    background-color: blue;
+    background-color: rgb(38, 38, 40);
     border-radius: 10px;
     padding: 10px;
     justify-content: space-evenly;
     align-items: center;
     display: flex;
-    height: 90px;
+    height: 40px;
     width: 150px;
     margin: auto;
 }
@@ -14,11 +21,22 @@ p {
     color: wheat;
 }
 
-.countBoxButtons {
-    display: flex;
-    flex-direction: column;
+.counterButton {
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
 }
 
 button {
     margin: 5px 0px;
+}
+
+.availableBox {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.counterNumber {
+    font-family: 'Aladin', sans-serif;
+    font-size: 20px;
 }

@@ -6,13 +6,13 @@ export const useCounter = (inicial, maximo) => {
 
     const sumar = () => {
         if (contador < maximo) {
-            setContador(contador + 1)
+            setContador((prev) => prev + 1)
         }
     }
 
     const restar = () => {
         if (contador > inicial) {
-            setContador(contador - 1)
+            setContador((prev) => prev - 1)
         }
     }
 

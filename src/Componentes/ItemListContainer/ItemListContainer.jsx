@@ -1,33 +1,42 @@
 import './ItemListContainer.css'
-import { getMyProducts, getProductByCategory } from '../AsyncMock/AsynMock'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+import { getDocs, collection, where, query } from "firebase/firestore"
+import { db } from "../../Services/config"
 
 const ItemListContainer = () => {
-    
-    const [productos, setProductos] = useState([])
-    const {idCategoria} = useParams()
+  const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { idCategoria } = useParams();
 
-    useEffect(() => {
-        const funcion = idCategoria ? getProductByCategory : getMyProducts;
+  useEffect(() => {
+    const miProductos = idCategoria ? query(collection(db, "Productos"), where("categoria", "==", idCategoria)) : collection(db, "Productos");
 
-        console.log(funcion)
+    setLoading(true); // Comienza la carga de productos
 
-        funcion(idCategoria)
-            .then((res) => setProductos(res))
-
-    }, [idCategoria])
-
+    getDocs(miProductos)
+      .then(res => {
+        const nuevosProductos = res.docs.map(doc => {
+          const data = doc.data();
+          return { id: doc.id, ...data };
+        });
+        setProductos(nuevosProductos);
+      })
+      .catch(error => console.log(error))
+      .finally(() => {
+        setLoading(false); 
+      });
+  }, [idCategoria]);
 
   return (
     <div className='ItemContainer'>
-        <div className='ItemsList'>
-            <ItemList className='ItemBox' productos={productos}/>
-        </div>
-        
+      <div className='ItemsList'>
+        {loading ? <img src='../src/Componentes/IMG/Loading.svg' alt="" /> : <ItemList className='ItemBox' productos={productos} />}
+      </div>
     </div>
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer;
+

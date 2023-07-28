@@ -4,9 +4,8 @@ import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer
 import ItemCounter from './Componentes/ItemCounter/ItemCounter'
 import HomeTitle from './Componentes/HomeTitle/HomeTitle'
 import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer'
-
+import CartComplete from './Componentes/CartComplete/CartComplete'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 
 const App = () => {
 
@@ -23,6 +22,7 @@ const App = () => {
           <Route path='/Peliculas/:idCategoria' element={<ItemListContainer />}/>
           <Route path='/Item/:idProd' element={<ItemDetailContainer />}/>
           <Route path='*' element={<ItemListContainer />}/>
+          <Route path='/Cart' element={<CartComplete />} />
         </Routes>
       </BrowserRouter>
     </>

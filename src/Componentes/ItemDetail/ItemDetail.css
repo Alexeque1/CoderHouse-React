@@ -1,19 +1,67 @@
 .ItemBoxAlert {
-    width: 450px;
+    width: 80%;
     height: 100%;
     margin: 10px 0px;
+    display: flex;
 }
 
 .exitIcon {
     margin-left: 10px;
 }
 
+.itemDetailBoxes {
+    height: 100%;
+    width: 50%;
+}
+
+.itemPictureBox {
+    display: block;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 30px 0px 30px 30px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.itemPictureBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.itemInfoBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 15px;
+    background-color: rgb(33, 58, 149);
+    border-radius: 0px 0px 30px 30px;
+    text-align: center;
+}
+
+.ItemBox_infText {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.detailedMargin {
+    margin: 5px 0px;
+}
+
 .glassBack {
+    padding: 15px;
     background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
-padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.finalBtn {
+    margin: 5px;
+    width: 80%;
 }

@@ -1,8 +1,10 @@
-import { getAProducts } from "../AsyncMock/AsynMock"
+// import { getAProducts } from "../AsyncMock/AsynMock"
 import { useState, useEffect } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import './ItemDetailContainer.css'
 import { useParams } from "react-router-dom"
+import { getDoc, doc } from "firebase/firestore"
+import { db } from "../../Services/config"
 
 const ItemDetailContainer = ({productoID, onClose}) => {
 
@@ -12,10 +14,17 @@ const ItemDetailContainer = ({productoID, onClose}) => {
 
     console.log(idProd)
 
-    useEffect(() => {
-        getAProducts(idProd)
-            .then(response => setProducto(response))
-    },[])
+    useEffect(() =>{
+        const nuevoDoc = doc(db, "Productos", idProd)
+
+        getDoc(nuevoDoc)
+          .then((res) => {
+              const data = res.data()
+              const nuevoProducto = {id: res.id, ...data}
+              setProducto(nuevoProducto)
+          })
+          .catch(error => console.log(error))
+    }, [idProd])
 
     console.log(producto)
 
